@@ -12,7 +12,11 @@ public class InsuranceServiceImpl implements InsuranceService {
 
     @Override
     public Insurance generate() {
-        return new Insurance("1", "GG", new Date());
+        Insurance insurance = new Insurance("1", "GG", new Date());
+        insurance.setName("insurance");
+        insurance.getName();
+        insurance.operations();
+        return insurance;
     }
 
     @Override

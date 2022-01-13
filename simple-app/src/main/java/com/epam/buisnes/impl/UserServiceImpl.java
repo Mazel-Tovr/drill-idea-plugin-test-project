@@ -9,7 +9,7 @@ import java.util.*;
 @Service
 public class UserServiceImpl implements UserService {
 
-    private final Set<User> users = new HashSet();
+    private final Set<User> users = new HashSet<>();
 
     @Override
     public boolean validateUser(User user) {
@@ -20,6 +20,7 @@ public class UserServiceImpl implements UserService {
     public User registerUser(String name, String password) {
         User user = new User(name, name, password);
         System.out.println("Is user added " + validateUser(user));
+        users.add(user);
         User user1 = new User();
         user1.setId(name);
         user1.setName(name);
